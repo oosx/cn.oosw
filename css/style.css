@@ -1,0 +1,52 @@
+a {
+    text-decoration: none;
+    color:dodgerblue;
+}
+
+a:visited, a:link {
+    color:dodgerblue;
+    text-underline-offset: auto;
+  }
+
+a:hover, a:focus {
+color:darkblue;
+}
+
+#myAvatar {
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    pointer-events: none;
+    vertical-align: middle;
+    margin-right: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+#myName {
+    font-size: 50px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#menu {
+    /* display: inline-block; */
+    font-size: 25px;
+    /* vertical-align: middle; */
+    float: right;
+
+}
+
+td.menuItem {
+    margin-right: 20px;
+}
+
+
+
+/* main */
+
+p.school{
+    font-size: 20px;
+    font-weight: bold;
+}
