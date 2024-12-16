@@ -31,14 +31,9 @@ color:darkblue;
 }
 
 #menu {
-    /* display: inline-block; */
     font-size: 25px;
-    /* vertical-align: middle; */
-    float: right;
-
-}
-
-td.menuItem {
+    font-weight: bold;
+    font-family: serif;
     margin-right: 20px;
 }
 
