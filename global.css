@@ -22,3 +22,13 @@ html, body {
     display: none;
     width: 0;
   }
+  
+  ::selection {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  ::-moz-selection {
+    background-color: #000;
+    color: #fff;
+  }
