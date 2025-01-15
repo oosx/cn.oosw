@@ -1,32 +1,179 @@
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.back-button, .github-button {
   border: none;
   background: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 16px;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 8px;
 }
 
 .back-button:hover {
   opacity: 0.7;
 }
 
-.back-button img {
-  width: 24px;
-  height: 24px;
+.github-button {
+  background-color: #24292e;
+  color: white;
 }
 
-.back-button span {
-  font-size: 16px;
-  user-select: none;
+.github-button:hover {
+  background-color: #1a1f24;
 }
 
-main {
-  position: relative;
-  padding-top: 60px; /* 为返回按钮留出空间 */
+.back-button img, .github-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.github-button img {
+  filter: invert(1);
+}
+
+.github-button span {
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+}
+
+.title-container {
+  text-align: center;
+  flex: 1;
+}
+
+.project-title {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.divider {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0.5rem auto;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.tags-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tag {
+    background-color: #666666;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.tag:hover {
+    background-color: #555555;
 } 
+
+.description-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+}
+
+.feature {
+  padding: 16px; /* 从20px减小到16px */
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.feature h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px; /* 从18px减小到16px */
+  font-weight: 600;
+  margin-bottom: 6px; /* 从8px减小到6px */
+  color: #333;
+}
+
+.feature p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 13px; /* 从14px减小到13px */
+  line-height: 1.4; /* 从1.5减小到1.4 */
+  color: #666;
+  margin: 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* 从30px减小到20px */
+}
+
+@media (max-width: 768px) {
+  .feature-grid {
+      grid-template-columns: 1fr;
+  }
+}
