@@ -13,6 +13,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
+  flex: 1;
 }
 
 .project-grid {
@@ -20,7 +21,7 @@ body {
   grid-template-columns: 1fr;
   gap: 40px;
   padding: 20px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -32,6 +33,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   display: block;
+  min-height: 200px;
 }
 
 .project-card:hover {
@@ -40,20 +42,20 @@ body {
 }
 
 .project-info {
-  padding: 24px;
+  padding: 32px;
 }
 
 .project-info h2 {
-  margin: 0 0 12px 0;
-  font-size: 20px;
+  margin: 0 0 16px 0;
+  font-size: 24px;
   color: #333;
 }
 
 .project-description {
-  margin: 0 0 16px 0;
-  font-size: 14px;
+  margin: 0 0 24px 0;
+  font-size: 16px;
   color: #666;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .project-tags {
@@ -98,5 +100,92 @@ body {
 @media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+.project-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.year-nav {
+  flex: 0 0 100px;
+  position: fixed;
+  top: 100px;
+  left: calc((100% - 1200px) / 2 + 20px);
+  height: fit-content;
+  z-index: 10;
+}
+
+.year-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.year-nav li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+.year-nav li:hover,
+.year-nav li.active {
+  color: #000;
+  font-weight: bold;
+}
+
+.project-year {
+  margin-bottom: 40px;
+}
+
+.project-year h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.pinned {
+  border: 2px solid #FFD700;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.pinned:hover {
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3);
+}
+
+.pinned::before {
+  content: "Pinned";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #FFD700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.project-date {
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .year-nav {
+    left: 20px;
   }
 }

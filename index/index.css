@@ -76,6 +76,10 @@ body {
   color: #000;
   position: relative;
   isolation: isolate;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .resume-button::before {
