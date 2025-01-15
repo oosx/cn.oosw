@@ -1,67 +1,13 @@
 const projectData = [
   {
-    title: "Pinned Project",
-    description: "This is a pinned project that will always appear at the top.",
-    tags: ["React", "Node.js", "MongoDB"],
-    projectLink: "#",
-    paperLink: "#",
-    year: 2024,
-    month: 3,
+    title: "MUNNY",
+    description: "Multi-currency Accounting WeChat Mini Program",
+    tags: ["JavaScript", "HTML5", "CSS3", "Cloud Database"],
+    projectLink: "projectLibrary/projMunny/projMunny.html",
+    paperLink: "",
+    year: 2025,
+    month: 1,
     pinned: true
-  },
-  {
-    title: "Latest Project",
-    description: "This is the latest project in 2024.",
-    tags: ["Python", "TensorFlow"],
-    projectLink: "#",
-    paperLink: "#",
-    year: 2024,
-    month: 2
-  },
-  {
-    title: "Old Project",
-    description: "This is an older project from 2023.",
-    tags: ["Vue.js", "Firebase"],
-    projectLink: "#",
-    paperLink: "#",
-    year: 2023,
-    month: 12
-  },
-  {
-    title: "Old Project",
-    description: "This is an older project from 2023.",
-    tags: ["Vue.js", "Firebase"],
-    projectLink: "#",
-    paperLink: "#",
-    year: 2022,
-    month: 7
-  },
-  {
-    title: "Old Project",
-    description: "This is an older project from 2023.",
-    tags: ["Vue.js", "Firebase"],
-    projectLink: "#",
-    paperLink: "#",
-    year: 2022,
-    month: 10
-  },
-  {
-    title: "Old Project",
-    description: "This is an older project from 2023.",
-    tags: ["Vue.js", "Firebase"],
-    projectLink: "#",
-    paperLink: "#",
-    year: 2022,
-    month: 10
-  },
-  {
-    title: "Old Project",
-    description: "This is an older project from 2023.",
-    tags: ["Vue.js", "Firebase"],
-    projectLink: "#",
-    paperLink: "#",
-    year: 2019,
-    month: 10
   }
 ];
 
@@ -82,7 +28,7 @@ function createProjectCard(project, showPinned = true) {
         </div>
         <div class="project-links">
           <a href="${project.projectLink}" class="project-link">View Project →</a>
-          <a href="${project.paperLink}" class="project-link paper-link">View Paper →</a>
+          ${project.paperLink ? `<a href="${project.paperLink}" class="project-link paper-link">View Paper →</a>` : ''}
         </div>
       </div>
     </div>
