@@ -188,15 +188,21 @@ document.addEventListener('DOMContentLoaded', () => {
       skillCards.forEach(c => {
         c.classList.remove('active');
         const img = c.querySelector('img');
-        const src = img.src;
-        img.src = src.replace('_for_dark', '_for_light');
+        if (img.src.includes('_for_dark')) {
+          img.src = img.src.replace('_for_dark', '_for_light');
+        }
       });
 
       // 激活当前卡片并切换图标
       card.classList.add('active');
       const img = card.querySelector('img');
-      const src = img.src;
-      img.src = src.replace('_for_light', '_for_dark');
+      if (img.src.includes('_for_light')) {
+        img.src = img.src.replace('_for_light', '_for_dark');
+      }
+
+      // 更新相关项目显示
+      const skill = card.dataset.skill;
+      updateProjects(skill);
     });
   });
 
@@ -204,12 +210,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialActive = document.querySelector('.skill-card.active');
   if (initialActive) {
     const img = initialActive.querySelector('img');
-    const src = img.src;
-    img.src = src.replace('_for_light', '_for_dark');
-  }
-
-  // 初始化显示激活技能的项目
-  if (initialActive) {
+    if (img.src.includes('_for_light')) {
+      img.src = img.src.replace('_for_light', '_for_dark');
+    }
     updateProjects(initialActive.dataset.skill);
   }
 });
