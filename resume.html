@@ -72,7 +72,7 @@
     <main class="resume-container">
       <div class="sidebar">
         <div class="pdf-selector">
-          <h3>Resumé</h3>
+          <h3 draggable="false" style="user-select: none">Resumé</h3>
           <div
             class="pdf-option active"
             data-pdf="/resume/Resume_General_Chinese.pdf"
@@ -204,6 +204,11 @@
             link.click();
             document.body.removeChild(link);
           });
+        });
+
+        const resumeTitle = document.querySelector(".sidebar h3");
+        resumeTitle.addEventListener("contextmenu", (e) => {
+          e.preventDefault();
         });
       });
     </script>

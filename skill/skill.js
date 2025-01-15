@@ -7,15 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
     python: [
       { 
         title: 'AI Image Generator', 
-        image: '/projects/ai-image.jpg', 
         link: '#',
         description: 'Using stable diffusion to generate images'
       },
       { 
         title: 'Data Analysis Dashboard', 
-        image: '/projects/dashboard.jpg', 
         link: '#',
         description: 'Real-time data visualization platform'
+      }
+    ],
+    wechatminiprogram: [
+      { 
+        title: 'Munny', 
+        link: '/projectLibrary/projMunny/projMunny.html',
+        description: 'Multi-currency Accounting WeChat Mini Program'
       }
     ],
     html5: [
@@ -55,6 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
     javascript: [
       { 
         title: 'Game Engine', 
+        image: '/projects/game-engine.jpg', 
+        link: '#',
+        description: '2D game engine with physics simulation'
+      }
+    ],
+    swiftui: [
+      { 
+        title: 'iOS App', 
         image: '/projects/game-engine.jpg', 
         link: '#',
         description: '2D game engine with physics simulation'
@@ -145,10 +158,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
+    
+    // 如果有链接，添加点击事件
+    if (project.link) {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            window.location.href = project.link;
+        });
+    }
+    
     card.innerHTML = `
-      <div class="project-image">
-        <img src="${project.image}" alt="${project.title}">
-      </div>
       <div class="project-info">
         <h3>${project.title}</h3>
         <p>${project.description}</p>

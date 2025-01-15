@@ -140,3 +140,7 @@ canvas {
 .wave:nth-child(6) { animation-delay: 0.6s; }
 .wave:nth-child(7) { animation-delay: 0.7s; }
 .wave:nth-child(8) { animation-delay: 0.8s; }
+
+.sidebar h3 {
+  user-select: none;
+}

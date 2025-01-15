@@ -51,6 +51,15 @@ const projectData = [
     tags: ["Vue.js", "Firebase"],
     projectLink: "#",
     paperLink: "#",
+    year: 2022,
+    month: 10
+  },
+  {
+    title: "Old Project",
+    description: "This is an older project from 2023.",
+    tags: ["Vue.js", "Firebase"],
+    projectLink: "#",
+    paperLink: "#",
     year: 2019,
     month: 10
   }
@@ -156,14 +165,11 @@ function renderProjects() {
     li.addEventListener('click', () => {
       const year = li.dataset.year;
       const yearSection = document.getElementById(`year-${year}`);
-      const windowHeight = window.innerHeight;
-      const sectionHeight = yearSection.offsetHeight;
       
-      // 计算滚动位置，使项目区块居中显示
-      const scrollTo = yearSection.offsetTop - (windowHeight - sectionHeight) / 2;
-      window.scrollTo({
-        top: scrollTo,
-        behavior: 'smooth'
+      // 直接滚动到年份区块的顶部
+      yearSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start' // 设置为 'start' 使其对齐到屏幕顶部
       });
     });
   });

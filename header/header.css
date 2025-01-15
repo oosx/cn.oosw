@@ -58,6 +58,17 @@ header {
     pointer-events: auto;
 }
 
+.left-nav ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.left-nav ul li a:hover {
+    transform: scale(1.1);
+}
+
 /* 中间 Logo */
 .logo {
     position: absolute;

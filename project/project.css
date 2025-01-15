@@ -143,6 +143,7 @@ body {
 
 .project-year {
   margin-bottom: 40px;
+  scroll-margin-top: 80px;
 }
 
 .project-year h2 {
