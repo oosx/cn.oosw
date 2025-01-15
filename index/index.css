@@ -1,0 +1,281 @@
+/* 基础样式 */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: rgba(245, 245, 247, .8);
+}
+
+/* 主要内容区域 */
+.main-content {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;  /* 设置为视窗高度 */
+}
+
+/* Hello, I'm 部分 */
+.greeting {
+  font-size: 64px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #4169E1, #BA55D3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* 添加一个固定大小的容器 */
+.typing-container {
+  height: 86px; /* 与 title 的 min-height 相同 */
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  position: relative;
+  min-height: 86px;
+  line-height: 1.2;
+}
+
+.title::after {
+  content: '|';
+  position: absolute;
+  color: #000;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 描述文本 */
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+/* Resume 按钮 */
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  isolation: isolate;
+}
+
+.resume-button::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(to right, #4169E1, #BA55D3);
+  border-radius: 10px;
+  z-index: -2;
+}
+
+.resume-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+/* 右侧头像 */
+.avatar {
+  position: absolute;
+  right: 100px;
+  top: 150px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 2;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* 禁止所有鼠标事件，包括右键菜单 */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* 分隔线样式 */
+.divider {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  position: relative;
+  z-index: 1;
+}
+
+/* 文本选中样式 */
+::selection {
+  background-color: #333333;
+  color: white;
+}
+
+/* Firefox 需要单独设置 */
+::-moz-selection {
+  background-color: #333333;
+  color: white;
+}
+
+/* 滚动指示器 */
+.scroll-indicator {
+  position: fixed; /* 固定位置 */
+  bottom: 40px; /* 距离底部距离 */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; /* 确保在其他元素上方 */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* 添加淡入淡出效果 */
+}
+
+.scroll-indicator.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: bounce 2s infinite;
+}
+
+.arrows svg {
+  margin: 2px 0;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 悬浮卡片 */
+.hover-card {
+  position: fixed;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  transform: translate(10px, 10px);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+  font-family: 'Noto Sans', sans-serif;
+  z-index: 1000;
+}
+
+/* 位置图标样式 */
+.location-icon {
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  margin-right: 4px;
+  margin-top: -2px;
+}
+
+/* 调整其他元素的层级 */
+header {
+  z-index: 998;
+}
+
+.blank-page {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 245, 247, .8) 0%,
+    #FFFFFF 30%,
+    #FFFFFF 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* 警戒线条纹 - 左上到右下 */
+.blank-page::before {
+  content: 'Website Under Construction';
+  position: absolute;
+  left: -5%;
+  top: 40%;
+  width: 110%;
+  height: 60px;
+  background: #FFD700;
+  transform: rotate(-15deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* 警戒线条纹 - 右上到左下 */
+.blank-page::after {
+  content: 'Website Under Construction';
+  position: absolute;
+  left: -5%;
+  top: 40%;
+  width: 110%;
+  height: 60px;
+  background: #FFD700;
+  transform: rotate(15deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
