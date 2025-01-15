@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'Real-time data visualization platform'
       }
     ],
-    javascript: [
+    html5: [
       { 
         title: 'Interactive Portfolio', 
         image: '/projects/portfolio.jpg', 
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'Drag and drop task management system'
       }
     ],
-    java: [
+    css3: [
       { 
         title: 'E-commerce Platform', 
         image: '/projects/ecommerce.jpg', 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'Real-time messaging system'
       }
     ],
-    cpp: [
+    javascript: [
       { 
         title: 'Game Engine', 
         image: '/projects/game-engine.jpg', 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: '2D game engine with physics simulation'
       }
     ],
-    react: [
+    mysql: [
       { 
         title: 'Social Media App', 
         image: '/projects/social.jpg', 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'Online code editor with syntax highlighting'
       }
     ],
-    vue: [
+    timeseries: [
       { 
         title: 'Blog Platform', 
         image: '/projects/blog.jpg', 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'Online course management system'
       }
     ],
-    ml: [
+    deeplearning: [
       { 
         title: 'Face Recognition', 
         image: '/projects/face.jpg', 
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'Multi-label image classification system'
       }
     ],
-    dl: [
+    photoshop: [
       { 
         title: 'Neural Style Transfer', 
         image: '/projects/style-transfer.jpg', 
@@ -184,16 +184,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // 处理技能卡片点击
   skillCards.forEach(card => {
     card.addEventListener('click', () => {
-      skillCards.forEach(c => c.classList.remove('active'));
+      // 移除其他卡片的激活状态并恢复原始图标
+      skillCards.forEach(c => {
+        c.classList.remove('active');
+        const img = c.querySelector('img');
+        const src = img.src;
+        img.src = src.replace('_for_dark', '_for_light');
+      });
+
+      // 激活当前卡片并切换图标
       card.classList.add('active');
-      
-      const skill = card.dataset.skill;
-      updateProjects(skill);
+      const img = card.querySelector('img');
+      const src = img.src;
+      img.src = src.replace('_for_light', '_for_dark');
     });
   });
 
-  // 初始化显示激活技能的项目
+  // 初始化激活状态的卡片图标
   const initialActive = document.querySelector('.skill-card.active');
+  if (initialActive) {
+    const img = initialActive.querySelector('img');
+    const src = img.src;
+    img.src = src.replace('_for_light', '_for_dark');
+  }
+
+  // 初始化显示激活技能的项目
   if (initialActive) {
     updateProjects(initialActive.dataset.skill);
   }
