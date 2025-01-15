@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WU Kechen | Skills</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/header/header.css" />
+    <link rel="stylesheet" href="/skill/skill.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="left-nav" draggable="false">
+        <ul draggable="false">
+          <li draggable="false"><a href="/index.html">Home</a></li>
+          <li draggable="false"><a href="/skill.html">Skill</a></li>
+          <li draggable="false"><a href="/project.html">Project</a></li>
+          <li draggable="false"><a href="/resume.html">Resumé</a></li>
+        </ul>
+      </nav>
+
+      <div class="logo" draggable="false">
+        <h1>OSUN</h1>
+      </div>
+
+      <div class="right-nav">
+        <div class="social-links" draggable="false">
+          <a
+            href="https://github.com/oosx"
+            class="github-icon"
+            target="_blank"
+            draggable="false"
+          >
+            <img
+              src="/header/img/github/github_for_light.svg"
+              alt="GitHub"
+              draggable="false"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/ng_kheuzen"
+            class="instagram-icon"
+            target="_blank"
+            draggable="false"
+          >
+            <img
+              src="/header/img/instagram/instagram_for_light.svg"
+              alt="Instagram"
+              draggable="false"
+            />
+          </a>
+          <a href="mailto:osw@outlook.sg" class="email-icon" draggable="false">
+            <img
+              src="/header/img/email/email_for_light.svg"
+              alt="Email"
+              draggable="false"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="skill-container">
+        <div class="skill-selector">
+          <div class="skill-cards">
+            <div class="skill-card active" data-skill="python">
+              <img
+                src="/skill/img/python/python_for_light.svg"
+                alt="Python"
+                class="skill-icon"
+              />
+              <span class="skill-name">Python</span>
+            </div>
+            <div class="skill-card" data-skill="wechatminiprogram">
+              <img
+                src="/skill/img/wechatminiprogram/wechatminiprogram_for_light.svg"
+                alt="Wechat Mini Program"
+                class="skill-icon"
+              />
+              <span class="skill-name">Wechat<br />Mini Program</span>
+            </div>
+            <div class="skill-card" data-skill="html5">
+              <img
+                src="/skill/img/html5/html5_for_light.svg"
+                alt="HTML5"
+                class="skill-icon"
+              />
+              <span class="skill-name">HTML5</span>
+            </div>
+
+            <div class="skill-card" data-skill="css3">
+              <img
+                src="/skill/img/css3/css3_for_light.svg"
+                alt="CSS3"
+                class="skill-icon"
+              />
+              <span class="skill-name">CSS3</span>
+            </div>
+
+            <div class="skill-card" data-skill="javascript">
+              <img
+                src="/skill/img/javascript/javascript_for_light.svg"
+                alt="JavaScript"
+                class="skill-icon"
+              />
+              <span class="skill-name">JavaScript</span>
+            </div>
+
+            <div class="skill-card" data-skill="swiftui">
+              <img
+                src="/skill/img/swiftui/swiftui_for_light.svg"
+                alt="SwiftUI"
+                class="skill-icon"
+              />
+              <span class="skill-name">SwiftUI</span>
+            </div>
+
+            <div class="skill-card" data-skill="mysql">
+              <img
+                src="/skill/img/mysql/mysql_for_light.svg"
+                alt="MySQL"
+                class="skill-icon"
+              />
+              <span class="skill-name">MySQL</span>
+            </div>
+
+            <div class="skill-card" data-skill="timeseries">
+              <img
+                src="/skill/img/timeseries/timeseries_for_light.svg"
+                alt="Time Series"
+                class="skill-icon"
+              />
+              <span class="skill-name">Time Series</span>
+            </div>
+
+            <div class="skill-card" data-skill="deeplearning">
+              <img
+                src="/skill/img/deeplearning/deeplearning_for_light.svg"
+                alt="Deep Learning"
+                class="skill-icon"
+              />
+              <span class="skill-name">Deep Learning</span>
+            </div>
+
+            <div class="skill-card" data-skill="photoshop">
+              <img
+                src="/skill/img/photoshop/photoshop_for_light.svg"
+                alt="Photoshop"
+                class="skill-icon"
+              />
+              <span class="skill-name">Photoshop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-container">
+        <div class="project-grid">
+          <!-- 项目卡片将通过 JavaScript 动态添加 -->
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", loadHeader);
+    </script>
+    <script src="/skill/skill.js"></script>
+  </body>
+</html>
