@@ -107,6 +107,20 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'Online course management system'
       }
     ],
+    machinelearning: [
+      { 
+        title: 'Blog Platform', 
+        image: '/projects/blog.jpg', 
+        link: '#',
+        description: 'Personal blog with CMS'
+      },
+      { 
+        title: 'E-learning Dashboard', 
+        image: '/projects/learning.jpg', 
+        link: '#',
+        description: 'Online course management system'
+      }
+    ],
     deeplearning: [
       { 
         title: 'Face Recognition', 
@@ -141,16 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     photoshop: [
       { 
-        title: 'Neural Style Transfer', 
-        image: '/projects/style-transfer.jpg', 
-        link: '#',
-        description: 'Artistic style transfer using deep learning'
-      },
-      { 
-        title: 'Language Model', 
-        image: '/projects/nlp.jpg', 
-        link: '#',
-        description: 'Natural language processing model'
+        title: 'X-Plane 11 Aircraft Repaint', 
+        // image: '/projects/style-transfer.jpg', 
+        link: '/projectLibrary/projX-Plane11AircraftRepaint/projX-Plane11AircraftRepaint.html',
+        description: 'Flight Simulator Aircraft Repaint'
       }
     ]
   };
