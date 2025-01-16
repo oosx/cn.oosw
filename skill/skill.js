@@ -5,7 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // 项目数据
   const projects = {
     python: [
-
+      { 
+        title: 'Quasi-Biweekly Intraseasonal Extremes Research in Hong Kong from 1884 to 2022', 
+        link: '/projectLibrary/projQBIE/projQBIE.html',
+        description: 'Master\'s Thesis Project'
+      }
     ],
     wechatminiprogram: [
       { 
@@ -16,6 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     html5: [
       { 
+        title: 'OSUN', 
+        link: '/projectLibrary/projOSUN/projOSUN.html',
+        description: 'Personal Website: http://www.oosw.cn/'
+      },
+      { 
         title: 'Munny', 
         link: '/projectLibrary/projMunny/projMunny.html',
         description: 'Multi-currency Accounting WeChat Mini Program'
@@ -23,12 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     css3: [
       { 
+        title: 'OSUN', 
+        link: '/projectLibrary/projOSUN/projOSUN.html',
+        description: 'Personal Website: http://www.oosw.cn/'
+      },
+      { 
         title: 'Munny', 
         link: '/projectLibrary/projMunny/projMunny.html',
         description: 'Multi-currency Accounting WeChat Mini Program'
       }
     ],
     javascript: [
+      { 
+        title: 'OSUN', 
+        link: '/projectLibrary/projOSUN/projOSUN.html',
+        description: 'Personal Website: http://www.oosw.cn/'
+      },
       { 
         title: 'Munny', 
         link: '/projectLibrary/projMunny/projMunny.html',
@@ -42,7 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ],
     timeseries: [
-  
+      { 
+        title: 'Quasi-Biweekly Intraseasonal Extremes Research in Hong Kong from 1884 to 2022', 
+        link: '/projectLibrary/projQBIE/projQBIE.html',
+        description: 'Master\'s Thesis Project'
+      }
     ],
     machinelearning: [
 

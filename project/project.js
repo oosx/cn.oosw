@@ -10,6 +10,24 @@ const projectData = [
     pinned: true
   },
   {
+    title: "OSUN",
+    description: "Personal Website:  http://www.oosw.cn/",
+    tags: ["JavaScript", "HTML5", "CSS3"],
+    projectLink: "projectLibrary/projOSUN/projOSUN.html",
+    paperLink: "",
+    year: 2025,
+    month: 1,
+  },
+  {
+    title: "Quasi-Biweekly Intraseasonal Extremes Research <br> in Hong Kong from 1884 to 2022",
+    description: "Master's Thesis Project",
+    tags: ["Python", "Time Series", "Climate Change"],
+    projectLink: "projectLibrary/projQBIE/projQBIE.html",
+    paperLink: "#",
+    year: 2024,
+    month: 6,
+  },
+  {
     title: "X-Plane 11 Aircraft Repaint",
     description: "Flight Simulator Aircraft Repaint",
     tags: ["Photoshop"],
