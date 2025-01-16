@@ -8,6 +8,15 @@ const projectData = [
     year: 2025,
     month: 1,
     pinned: true
+  },
+  {
+    title: "X-Plane 11 Aircraft Repaint",
+    description: "Flight Simulator Aircraft Repaint",
+    tags: ["Photoshop"],
+    projectLink: "projectLibrary/projX-Plane11AircraftRepaint/projX-Plane11AircraftRepaint.html",
+    paperLink: "",
+    year: 2018,
+    month: 9,
   }
 ];
 
