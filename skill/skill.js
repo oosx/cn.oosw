@@ -5,16 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 项目数据
   const projects = {
     python: [
-      { 
-        title: 'AI Image Generator', 
-        link: '#',
-        description: 'Using stable diffusion to generate images'
-      },
-      { 
-        title: 'Data Analysis Dashboard', 
-        link: '#',
-        description: 'Real-time data visualization platform'
-      }
+
     ],
     wechatminiprogram: [
       { 
@@ -25,138 +16,43 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     html5: [
       { 
-        title: 'Interactive Portfolio', 
-        image: '/projects/portfolio.jpg', 
-        link: '#',
-        description: 'Personal portfolio website with animations'
-      },
-      { 
-        title: 'Weather App', 
-        image: '/projects/weather.jpg', 
-        link: '#',
-        description: 'Real-time weather forecast application'
-      },
-      { 
-        title: 'Task Manager', 
-        image: '/projects/tasks.jpg', 
-        link: '#',
-        description: 'Drag and drop task management system'
+        title: 'Munny', 
+        link: '/projectLibrary/projMunny/projMunny.html',
+        description: 'Multi-currency Accounting WeChat Mini Program'
       }
     ],
     css3: [
       { 
-        title: 'E-commerce Platform', 
-        image: '/projects/ecommerce.jpg', 
-        link: '#',
-        description: 'Full-stack online shopping platform'
-      },
-      { 
-        title: 'Chat Application', 
-        image: '/projects/chat.jpg', 
-        link: '#',
-        description: 'Real-time messaging system'
+        title: 'Munny', 
+        link: '/projectLibrary/projMunny/projMunny.html',
+        description: 'Multi-currency Accounting WeChat Mini Program'
       }
     ],
     javascript: [
       { 
-        title: 'Game Engine', 
-        image: '/projects/game-engine.jpg', 
-        link: '#',
-        description: '2D game engine with physics simulation'
+        title: 'Munny', 
+        link: '/projectLibrary/projMunny/projMunny.html',
+        description: 'Multi-currency Accounting WeChat Mini Program'
       }
     ],
     swiftui: [
-      { 
-        title: 'iOS App', 
-        image: '/projects/game-engine.jpg', 
-        link: '#',
-        description: '2D game engine with physics simulation'
-      }
+  
     ],
     mysql: [
-      { 
-        title: 'Social Media App', 
-        image: '/projects/social.jpg', 
-        link: '#',
-        description: 'Instagram-like photo sharing platform'
-      },
-      { 
-        title: 'Movie Database', 
-        image: '/projects/movies.jpg', 
-        link: '#',
-        description: 'Search and browse movies with TMDB API'
-      },
-      { 
-        title: 'Code Editor', 
-        image: '/projects/editor.jpg', 
-        link: '#',
-        description: 'Online code editor with syntax highlighting'
-      }
+
     ],
     timeseries: [
-      { 
-        title: 'Blog Platform', 
-        image: '/projects/blog.jpg', 
-        link: '#',
-        description: 'Personal blog with CMS'
-      },
-      { 
-        title: 'E-learning Dashboard', 
-        image: '/projects/learning.jpg', 
-        link: '#',
-        description: 'Online course management system'
-      }
+  
     ],
     machinelearning: [
-      { 
-        title: 'Blog Platform', 
-        image: '/projects/blog.jpg', 
-        link: '#',
-        description: 'Personal blog with CMS'
-      },
-      { 
-        title: 'E-learning Dashboard', 
-        image: '/projects/learning.jpg', 
-        link: '#',
-        description: 'Online course management system'
-      }
+
     ],
     deeplearning: [
-      { 
-        title: 'Face Recognition', 
-        image: '/projects/face.jpg', 
-        link: '#',
-        description: 'Real-time face detection and recognition'
-      },
-      { 
-        title: 'Stock Prediction', 
-        image: '/projects/stocks.jpg', 
-        link: '#',
-        description: 'ML-based stock price prediction'
-      },
-      { 
-        title: 'Recommendation System', 
-        image: '/projects/recommend.jpg', 
-        link: '#',
-        description: 'Content-based recommendation engine'
-      },
-      { 
-        title: 'Sentiment Analysis', 
-        image: '/projects/sentiment.jpg', 
-        link: '#',
-        description: 'Real-time social media sentiment analysis'
-      },
-      { 
-        title: 'Image Classification', 
-        image: '/projects/classification.jpg', 
-        link: '#',
-        description: 'Multi-label image classification system'
-      }
+
     ],
     photoshop: [
       { 
         title: 'X-Plane 11 Aircraft Repaint', 
-        // image: '/projects/style-transfer.jpg', 
         link: '/projectLibrary/projX-Plane11AircraftRepaint/projX-Plane11AircraftRepaint.html',
         description: 'Flight Simulator Aircraft Repaint'
       }
