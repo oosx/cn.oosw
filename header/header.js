@@ -23,15 +23,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 监听切换事件
-  themeToggle.addEventListener('change', () => {
-    if (themeToggle.checked) {
-      document.body.classList.add('dark-theme');
-      updateIcons('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-theme');
-      updateIcons('light');
-      localStorage.setItem('theme', 'light');
-    }
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener('change', () => {
+      if (themeToggle.checked) {
+        document.body.classList.add('dark-theme');
+        updateIcons('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark-theme');
+        updateIcons('light');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  }
+
+  // 处理邮箱复制功能
+  const emailLink = document.getElementById('copyEmail');
+  const notification = document.getElementById('copyNotification');
+  const overlay = document.getElementById('overlay');
+  const successSound = new Audio('/header/sound/apple-pay-success.mp3');
+  successSound.volume = 0.5;
+
+  if (emailLink) {
+    const email = emailLink.dataset.email;
+    
+    emailLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText(email).then(() => {
+        overlay.classList.add('show');
+        notification.classList.add('show');
+        
+        setTimeout(() => {
+          successSound.play().catch(error => {
+            console.log('Audio playback failed:', error);
+          });
+        }, 1000);
+        
+        setTimeout(() => {
+          overlay.classList.remove('show');
+          notification.classList.remove('show');
+        }, 2500);
+      });
+    });
+  }
 });
