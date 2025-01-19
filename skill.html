@@ -29,10 +29,20 @@
       <div class="right-nav">
         <div class="social-links" draggable="false">
           <a
+            class="email"
+            id="copyEmail"
+            data-email="osw@outlook.sg"
+            data-tooltip="Copy"
+            draggable="false"
+          >
+            OSW@OUTLOOK.SG
+          </a>
+          <a
             href="https://github.com/oosx"
             class="github-icon"
             target="_blank"
             draggable="false"
+            data-tooltip="GitHub"
           >
             <img
               src="/header/img/github/github_for_light.svg"
@@ -45,17 +55,11 @@
             class="instagram-icon"
             target="_blank"
             draggable="false"
+            data-tooltip="Instagram"
           >
             <img
               src="/header/img/instagram/instagram_for_light.svg"
               alt="Instagram"
-              draggable="false"
-            />
-          </a>
-          <a href="mailto:osw@outlook.sg" class="email-icon" draggable="false">
-            <img
-              src="/header/img/email/email_for_light.svg"
-              alt="Email"
               draggable="false"
             />
           </a>
@@ -176,5 +180,21 @@
       document.addEventListener("DOMContentLoaded", loadHeader);
     </script>
     <script src="/skill/skill.js"></script>
+        <!-- 在 body 结束标签前添加 -->
+        <div class="copy-notification" id="copyNotification">
+          <div class="notification-content">
+            <div class="success-animation">
+              <svg class="circle" viewBox="0 0 32 32">
+                <circle cx="16" cy="16" r="14" fill="none" stroke="#4CAF50" stroke-width="2"/>
+              </svg>
+              <div class="checkmark"></div>
+            </div>
+            <span>Email Address Copied!</span>
+          </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <script src="/header/header.js"></script>
+      </body>
+    </html>
   </body>
 </html>
