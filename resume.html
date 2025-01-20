@@ -38,9 +38,13 @@
             class="email"
             id="copyEmail"
             data-email="osw@outlook.sg"
-            data-tooltip="Copy"
+            data-tooltip="Copy Email"
             draggable="false"
-          >
+            ><img
+              src="/header/img/email/email_for_light.svg"
+              alt="email"
+              class="email-icon"
+            />
             OSW@OUTLOOK.SG
           </a>
           <a
@@ -76,33 +80,27 @@
     <main class="resume-container">
       <div class="sidebar">
         <div class="pdf-selector">
-          <h3 draggable="false" style="user-select: none">Resumé</h3>
-          <div
-            class="pdf-option active"
-            data-pdf="/resume/Resume_General_Chinese.pdf"
-          >
+          <h3 draggable="false">
+            <img src="/resume/img/resume_for_light.svg" alt="document" class="document-icon" draggable="false" />
+            Resumé
+          </h3>
+          <div class="pdf-option active" data-pdf="/resume/Resume_General_Chinese.pdf">
             <span>English</span>
-            <img
-              src="/resume/img/download.svg"
-              alt="download"
-              class="download-icon"
-            />
+            <a href="/resume/Resume_General_Chinese.pdf" download class="download-link">
+              <img src="/resume/img/download.svg" alt="download" class="download-icon" />
+            </a>
           </div>
           <div class="pdf-option" data-pdf="/resume/Resume_General_Chinese.pdf">
-            <span>Simplified Chinese</span>
-            <img
-              src="/resume/img/download.svg"
-              alt="download"
-              class="download-icon"
-            />
+            <span>中文简体</span>
+            <a href="/resume/Resume_General_Chinese.pdf" download class="download-link">
+              <img src="/resume/img/download.svg" alt="download" class="download-icon" />
+            </a>
           </div>
           <div class="pdf-option" data-pdf="/resume/Resume_General_Chinese.pdf">
-            <span>Traditional Chinese</span>
-            <img
-              src="/resume/img/download.svg"
-              alt="download"
-              class="download-icon"
-            />
+            <span>中文繁體</span>
+            <a href="/resume/Resume_General_Chinese.pdf" download class="download-link">
+              <img src="/resume/img/download.svg" alt="download" class="download-icon" />
+            </a>
           </div>
         </div>
       </div>
