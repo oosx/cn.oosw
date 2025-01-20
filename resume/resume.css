@@ -24,6 +24,18 @@
   margin: 0 0 16px 0;
   font-size: 16px;
   color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pdf-selector h3 .document-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.pdf-selector {
+  overflow: hidden;
 }
 
 .pdf-option {
@@ -37,7 +49,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: slideDown 0.3s ease-out;
+  transform-origin: top;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 为每个选项添加延迟，实现依次展开 */
+.pdf-option:nth-child(1) { animation-delay: 0.1s; }
+.pdf-option:nth-child(2) { animation-delay: 0.2s; }
+.pdf-option:nth-child(3) { animation-delay: 0.3s; }
+.pdf-option:nth-child(4) { animation-delay: 0.4s; }
+.pdf-option:nth-child(5) { animation-delay: 0.5s; }
 
 .pdf-option:hover {
   background: #f5f5f5;
@@ -143,4 +177,110 @@ canvas {
 
 .sidebar h3 {
   user-select: none;
+}
+
+/* 下载成功提示框样式 */
+.download-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: none;
+  align-items: center;
+  gap: 12px;
+  z-index: 1100;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.download-notification.show {
+  display: flex;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.download-notification .notification-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.download-notification .success-animation {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.download-notification .circle {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+
+.download-notification .circle circle {
+  stroke-dasharray: 88;
+  stroke-dashoffset: 88;
+  animation: circle-draw 0.6s ease-out forwards;
+}
+
+.download-notification .checkmark {
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%) rotate(-45deg);
+  animation: checkmark-draw 0.4s ease-out 0.6s forwards;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+@keyframes circle-draw {
+  0% {
+    stroke-dashoffset: 88;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkmark-draw {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.markdown-viewer {
+  flex-grow: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  overflow: auto;
+}
+
+#content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* PDF 导出样式 */
+.pdf-content {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  max-width: 800px;
+  padding: 40px;
+  background: white;
 }

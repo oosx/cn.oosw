@@ -121,14 +121,30 @@ header {
 }
 
 .email {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   text-decoration: none !important;
   color: inherit;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 14px;
+  font-size: 12 px;
   font-weight: 600;
   letter-spacing: 0.5px;
   font-family: 'Noto Serif', serif;
+}
+
+.email-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.email span {
+  transform: translateY(-1px);
+  display: inline-block;
 }
 
 .email:hover {
