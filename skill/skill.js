@@ -103,62 +103,62 @@ document.addEventListener('DOMContentLoaded', () => {
     return card;
   }
 
-  function updateProjects(skill) {
-    projectGrid.innerHTML = ''; // 清空现有项目
-    const skillProjects = projects[skill] || [];
+  // 處理技能卡片點擊
+  function handleSkillCardClick(skillCard) {
+    const skillId = skillCard.dataset.skill;
     
-    // 如果没有项目，隐藏容器
-    if (skillProjects.length === 0) {
-      projectGrid.style.display = 'none';
-      return;
-    }
-
-    // 显示项目卡片
-    projectGrid.style.display = 'grid';
-    skillProjects.forEach(project => {
-      projectGrid.appendChild(createProjectCard(project));
+    // 更新卡片狀態
+    document.querySelectorAll('.skill-card').forEach(card => {
+      card.classList.remove('active');
+      // 恢復為淺色圖標
+      const img = card.querySelector('img');
+      const src = img.src;
+      img.src = src.replace('_for_dark', '_for_light');
     });
+    
+    skillCard.classList.add('active');
+    // 切換為深色圖標
+    const img = skillCard.querySelector('img');
+    const src = img.src;
+    img.src = src.replace('_for_light', '_for_dark');
 
-    // 处理不满三个的情况
-    if (skillProjects.length < 3) {
-      projectGrid.style.gridTemplateColumns = `repeat(${skillProjects.length}, 1fr)`;
-    } else {
-      projectGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    // 更新項目顯示
+    updateProjects(skillId);
+  }
+
+  // 更新項目顯示
+  function updateProjects(skillId) {
+    projectGrid.innerHTML = ''; // 清空現有項目
+
+    // 根據技能篩選並顯示項目
+    const filteredProjects = projects[skillId] || [];
+    filteredProjects.forEach(project => {
+      const projectCard = createProjectCard(project);
+      projectGrid.appendChild(projectCard);
+    });
+  }
+
+  // 處理 URL 錨點
+  function handleHashChange() {
+    const hash = window.location.hash;
+    if (hash) {
+      const skillId = hash.substring(1); // 移除 # 符號
+      const skillCard = document.querySelector(`.skill-card[data-skill="${skillId}"]`);
+      if (skillCard) {
+        // 更新卡片和項目
+        handleSkillCardClick(skillCard);
+        // 平滑滾動到該卡片
+        skillCard.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 
-  // 处理技能卡片点击
-  skillCards.forEach(card => {
-    card.addEventListener('click', () => {
-      // 移除其他卡片的激活状态并恢复原始图标
-      skillCards.forEach(c => {
-        c.classList.remove('active');
-        const img = c.querySelector('img');
-        if (img.src.includes('_for_dark')) {
-          img.src = img.src.replace('_for_dark', '_for_light');
-        }
-      });
-
-      // 激活当前卡片并切换图标
-      card.classList.add('active');
-      const img = card.querySelector('img');
-      if (img.src.includes('_for_light')) {
-        img.src = img.src.replace('_for_light', '_for_dark');
-      }
-
-      // 更新相关项目显示
-      const skill = card.dataset.skill;
-      updateProjects(skill);
-    });
+  // 為所有技能卡片添加點擊事件
+  document.querySelectorAll('.skill-card').forEach(card => {
+    card.addEventListener('click', () => handleSkillCardClick(card));
   });
 
-  // 初始化激活状态的卡片图标
-  const initialActive = document.querySelector('.skill-card.active');
-  if (initialActive) {
-    const img = initialActive.querySelector('img');
-    if (img.src.includes('_for_light')) {
-      img.src = img.src.replace('_for_light', '_for_dark');
-    }
-    updateProjects(initialActive.dataset.skill);
-  }
+  // 監聽 URL 變化
+  window.addEventListener('hashchange', handleHashChange);
+  handleHashChange(); // 初始加載時處理
 });

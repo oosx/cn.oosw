@@ -86,10 +86,35 @@
         <h2 class="title" id="typing-text"></h2>
       </div>
       <p class="description">
-        As a passionate and creative developer, I am dedicated to turning any
-        innovative ideas into reality. Also as a lifelong learner, I am eager to
-        explore every new thing that sparks my interest.
+        As a
+        <span class="highlight fade-in" style="--delay: 0.2s">passionate</span>
+        and
+        <span class="highlight fade-in" style="--delay: 0.4s">creative</span>
+        developer, I am
+        <span class="highlight fade-in" style="--delay: 0.6s">dedicated</span>
+        to turning any
+        <span class="highlight fade-in" style="--delay: 0.8s">innovative</span>
+        ideas into reality. Also as a
+        <span class="highlight fade-in" style="--delay: 1s"
+          >lifelong learner</span
+        >, I am eager to explore every new thing that sparks my interest.
       </p>
+
+      <div
+        class="highlight-only"
+        id="highlightDescription"
+        style="display: none"
+      >
+        <p class="intro-text greeting">And I'm a</p>
+        <div class="highlight-container">
+          <span class="highlight">PASSIONATE</span>
+          <span class="highlight">CREATIVE</span>
+          <span class="highlight">DEDICATED</span>
+          <span class="highlight">INNOVATIVE</span>
+          <span class="highlight">LIFELONG LEARNER</span>
+        </div>
+      </div>
+
       <a
         href="/resume.html"
         class="resume-button"
@@ -106,6 +131,70 @@
           oncontextmenu="return false;"
         />
       </a>
+
+      <!-- 添加技能圖標列表 -->
+      <div class="skill-icons">
+        <a
+          href="/skill.html#python"
+          class="skill-link"
+          data-skill-name="Python"
+        >
+          <img
+            src="/skill/img/python/python_for_light.svg"
+            alt="Python"
+            class="skill-icon"
+            draggable="false"
+          />
+        </a>
+        <a
+          href="/skill.html#javascript"
+          class="skill-link"
+          data-skill-name="JavaScript"
+        >
+          <img
+            src="/skill/img/javascript/javascript_for_light.svg"
+            alt="JavaScript"
+            class="skill-icon"
+            draggable="false"
+          />
+        </a>
+        <a href="/skill.html#html5" class="skill-link" data-skill-name="HTML5">
+          <img
+            src="/skill/img/html5/html5_for_light.svg"
+            alt="HTML5"
+            class="skill-icon"
+            draggable="false"
+          />
+        </a>
+        <a href="/skill.html#css3" class="skill-link" data-skill-name="CSS3">
+          <img
+            src="/skill/img/css3/css3_for_light.svg"
+            alt="CSS3"
+            class="skill-icon"
+            draggable="false"
+          />
+        </a>
+        <a
+          href="/skill.html#swiftui"
+          class="skill-link"
+          data-skill-name="SwiftUI"
+        >
+          <img
+            src="/skill/img/swiftui/swiftui_for_light.svg"
+            alt="SwiftUI"
+            class="skill-icon"
+            draggable="false"
+          />
+        </a>
+        <a href="/skill.html#mysql" class="skill-link" data-skill-name="MySQL">
+          <img
+            src="/skill/img/mysql/mysql_for_light.svg"
+            alt="MySQL"
+            class="skill-icon"
+            draggable="false"
+          />
+        </a>
+      </div>
 
       <div class="avatar" draggable="false">
         <img
@@ -156,9 +245,7 @@
     <script src="/index/typing.js"></script>
     <script src="/index/scroll.js"></script>
     <script src="/index/hover-card.js"></script>
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", loadHeader);
-    </script> -->
+    <script src="/index/index.js"></script>
     <script src="/header/header.js"></script>
     <div class="copy-notification" id="copyNotification">
       <div class="notification-content">

@@ -64,6 +64,46 @@ body {
   margin-bottom: 32px;
 }
 
+.description .highlight {
+  background: linear-gradient(
+    120deg,
+    #4169E1 0%,
+    #BA55D3 33%,
+    #4169E1 66%,
+    #BA55D3 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 2px;
+  position: relative;
+  transition: all 0.3s ease;
+  animation: textGradient 8s linear infinite;
+}
+
+@keyframes textGradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.description .highlight:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation-play-state: paused;
+}
+
 /* Resume 按钮 */
 .resume-button {
   display: inline-flex;
@@ -80,15 +120,26 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  margin-top: 24px; /* 增加上邊距 */
 }
 
 .resume-button::before {
   content: '';
   position: absolute;
   inset: -2px;
-  background: linear-gradient(to right, #4169E1, #BA55D3);
+  background: linear-gradient(
+    90deg,
+    #4169E1 0%,
+    #BA55D3 20%,
+    #4169E1 40%,
+    #BA55D3 60%,
+    #4169E1 80%,
+    #BA55D3 100%
+  );
+  background-size: 200% 100%;
   border-radius: 10px;
   z-index: -2;
+  animation: buttonGradient 15s linear infinite;
 }
 
 .resume-button::after {
@@ -98,6 +149,22 @@ body {
   background: white;
   border-radius: 8px;
   z-index: -1;
+}
+
+.resume-button:hover::before {
+  animation-play-state: paused;
+}
+
+@keyframes buttonGradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }
 
 /* 右侧头像 */
@@ -289,3 +356,57 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+.skill-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.skill-icons .skill-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icons .skill-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skill-icons .skill-link:hover .skill-icon {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.hover-tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1000;
+  transform: translateX(-50%);
+}
+
+/* 移除這些樣式 */
+.highlight-only,
+.highlight-container,
+.intro-text {
+    display: none;
+}
+
+.scroll-hint {
+    transition: opacity 0.3s ease;
+}
+
