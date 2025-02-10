@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = {
     python: [
       { 
-        title: 'Quasi-Biweekly Intraseasonal Extremes Research in Hong Kong from 1884 to 2022', 
+        title: 'Research on Quasi-Biweekly to Intraseasonal Extreme Events in Hong Kong from 1885 to 2022', 
         link: '/projectLibrary/projQBIE/projQBIE.html',
         description: 'Master\'s Thesis Project'
       }
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     timeseries: [
       { 
-        title: 'Quasi-Biweekly Intraseasonal Extremes Research in Hong Kong from 1884 to 2022', 
+        title: 'Research on Quasi-Biweekly to Intraseasonal Extreme Events in Hong Kong from 1885 to 2022', 
         link: '/projectLibrary/projQBIE/projQBIE.html',
         description: 'Master\'s Thesis Project'
       }
