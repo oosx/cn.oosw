@@ -1,12 +1,12 @@
 const projectData = [
   {
-    title: "MUNNY",
-    description: "Multi-currency Accounting WeChat Mini Program",
-    tags: ["JavaScript", "HTML5", "CSS3", "Cloud Database"],
-    projectLink: "projectLibrary/projMunny/projMunny.html",
-    paperLink: "",
-    year: 2025,
-    month: 1,
+    title: "Research on Quasi-Biweekly to Intraseasonal Extreme Events in Hong Kong from 1885 to 2022",
+    description: "Master's Thesis Project",
+    tags: ["Python", "Time Series"],
+    projectLink: "projectLibrary/projQBIE/projQBIE.html",
+    paperLink: "https://www.mdpi.com/2076-3417/15/4/1764",
+    year: 2023,
+    month: 5,
     pinned: true
   },
   {
@@ -24,8 +24,8 @@ const projectData = [
     tags: ["Python", "Time Series"],
     projectLink: "projectLibrary/projQBIE/projQBIE.html",
     paperLink: "https://www.mdpi.com/2076-3417/15/4/1764",
-    year: 2024,
-    month: 6,
+    year: 2023,
+    month: 5,
   },
   {
     title: "X-Plane 11 Aircraft Repaint",
