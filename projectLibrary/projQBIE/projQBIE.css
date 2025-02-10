@@ -55,6 +55,7 @@
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    font-size: 28px;
 }
 
 .project-subtitle {
@@ -282,8 +283,8 @@
   margin-bottom: 3rem;
   padding: 1.5rem;
   background-color: var(--bg-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0.1, 0.1, 0.1, 0.1);
 }
 
 .publication-info h3 {
@@ -298,7 +299,7 @@
 
 .info-item {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 130px 1fr;
   gap: 1rem;
   align-items: baseline;
 }
